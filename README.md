@@ -1,2 +1,2 @@
-Repository per gli esercizi di Develhope
+Repository per gli esercizi su React
 
