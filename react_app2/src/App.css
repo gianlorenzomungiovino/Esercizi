@@ -1,0 +1,20 @@
+#root {
+  width: 320px;
+  height: 480px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(144, 238, 144, 0.5);
+  border-radius: 25px;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+/* .input-box {
+  margin-top: 1rem;
+} */
