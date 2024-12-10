@@ -8,18 +8,19 @@ export function Login({ onLogin }) {
   });
 
   function handleInputChange(event) {
-    const name = event.target.name;
-    const value = event.target.value;
-    const checked = event.target.checked;
-    const type = event.target.type;
+    // const name = event.target.name;
+    // const value = event.target.value;
+    // const checked = event.target.checked;
+    // const type = event.target.type;
+
+    const { name, value, checked, type } = event.target;
 
     setData((data) => {
       return { ...data, [name]: type === "checkbox" ? checked : value };
     });
   }
 
-  function handleLogin(event) {
-    event.preventDefault();
+  function handleLogin() {
     onLogin({
       username: data.username,
       password: data.password,

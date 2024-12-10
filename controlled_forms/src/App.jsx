@@ -9,6 +9,7 @@ import { Login } from "./componenti/Login";
 
 function App() {
   const handleLogin = (state) => {
+    preventDefault();
     console.log("Login attempted with:", state);
   };
 

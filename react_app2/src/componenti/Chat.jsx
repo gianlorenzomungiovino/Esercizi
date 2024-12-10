@@ -3,7 +3,7 @@ export function Chat({ messages, risposte }) {
   return (
     <div style={{ height: "460px" }}>
       {messaggio.map((item, index) => (
-        <div
+        <span
           key={index}
           style={{
             display: "flex",
@@ -21,7 +21,7 @@ export function Chat({ messages, risposte }) {
           }}
         >
           {item}
-        </div>
+        </span>
       ))}
     </div>
   );
