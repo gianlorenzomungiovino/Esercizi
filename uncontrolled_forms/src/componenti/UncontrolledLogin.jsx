@@ -13,8 +13,8 @@ export function UncontrolledLogin() {
 
   function loginWithFormData(event) {
     event.preventDefault();
-    const form = event.target.closest("form");
-    const formData = new FormData(form);
+    // const form = event.target.closest("form");
+    const formData = new FormData(event.target.form);
 
     const printData = {
       username: formData.get("username"),
@@ -28,7 +28,7 @@ export function UncontrolledLogin() {
     <form onSubmit={onLogin}>
       <input name="username" type="text" />
       <input name="password" type="password" />
-      <input type="checkbox" name="remember" />
+      <input name="remember" type="checkbox" />
       <button type="submit">Login</button>
       <button type="button" onClick={loginWithFormData}>
         Login with form data
