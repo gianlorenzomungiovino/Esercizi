@@ -33,7 +33,7 @@ export function Registrazione() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (errore) eturn;
+    if (errore) return;
     const existData = localStorage.getItem("users");
     let utentiRegistrati = [];
 
