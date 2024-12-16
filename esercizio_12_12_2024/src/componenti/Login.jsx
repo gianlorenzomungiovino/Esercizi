@@ -13,15 +13,17 @@ export function Login() {
   }
 
   function handleLogin(event) {
-    event.preventdefault();
-    const users = localStorage.getItem("users");
-    const parseUsers = JSON.parse(users);
-    const userExist = parseUsers.some(
+    event.preventDefault();
+    const userDatabase = localStorage.getItem("users");
+    const parseUsers = JSON.parse(userDatabase);
+    const userExist = parseUsers.find(
       (x) => x.email === data.email && x.password === data.password
     );
     if (userExist) {
       setMessaggio("Login effettuato con successo");
+      // eslint-disable-next-line no-unused-vars
       const isLogged = localStorage.setItem("isLogged", true);
+      localStorage.setItem("userExist", JSON.stringify(userExist));
     } else {
       setMessaggio("Credenziali errate");
     }
