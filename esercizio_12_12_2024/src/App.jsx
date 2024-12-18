@@ -1,21 +1,19 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
-import { Dashboard } from "./componenti/Dashboard";
-import { Login } from "./componenti/Login";
+
+import { useEffect } from "react";
+import { UserProvider } from "./componenti/UserContext";
 import { Registrazione } from "./componenti/Registrazione";
+import { Login } from "./componenti/Login";
+import { Dashboard } from "./componenti/Dashboard";
 
 function App() {
-  const [isLogged, setIsLogged] = useState(null);
-  const log = localStorage.getItem("isLogged");
-  useEffect(() => {
-    setIsLogged(log);
-  }, []);
-
   return (
-    <>
-      <Registrazione />
-      {isLogged === "true" ? <Dashboard /> : <Login />}
-    </>
+    <UserProvider>
+      <Registrazione></Registrazione>
+      <Login></Login>
+      <Dashboard></Dashboard>
+    </UserProvider>
   );
 }
 

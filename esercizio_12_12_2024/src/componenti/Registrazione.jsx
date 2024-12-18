@@ -34,7 +34,7 @@ export function Registrazione() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (errore) return;
-    const existData = localStorage.getItem("userDatabase");
+    const existData = localStorage.getItem("users");
     let utentiRegistrati = [];
 
     // verifica se esiste l'array vuoto
@@ -52,7 +52,7 @@ export function Registrazione() {
     }
 
     utentiRegistrati.push(data);
-    localStorage.setItem("userDatabase", JSON.stringify(utentiRegistrati));
+    localStorage.setItem("users", JSON.stringify(utentiRegistrati));
     setData({
       nome: "",
       cognome: "",
@@ -63,7 +63,7 @@ export function Registrazione() {
   };
 
   return (
-    <div>
+    <div className="box">
       <form className="registrazione" onSubmit={handleSubmit}>
         <label htmlFor="Nome">Nome</label>
         <input
