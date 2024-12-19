@@ -1,7 +1,7 @@
-import { useState } from "react";
+// aggiungere una variabile che sommi i dati degli users dell'api con quelli di coloro che si registrano sul sito (quindi modificare Registrazione) e fare renderizzare tutto nella dashboard
+
 import "./App.css";
 
-import { useEffect } from "react";
 import { UserProvider } from "./componenti/UserContext";
 import { Registrazione } from "./componenti/Registrazione";
 import { Login } from "./componenti/Login";

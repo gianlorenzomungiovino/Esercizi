@@ -19,7 +19,7 @@ export function GithubUsers() {
         <input
           type="text"
           value={username}
-          onChange={(type) => setUsername(type.target.value)}
+          onChange={(type) => setUsername(type.target.value.trim())}
         />
         <button type="submit">Search</button>
       </form>

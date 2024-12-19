@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { UserContext } from "./UserContext";
+import { FakeDatabase } from "./FakeDatabase";
 
 export function Dashboard() {
   const { logout, userLogged } = useContext(UserContext);
@@ -7,9 +8,8 @@ export function Dashboard() {
   return (
     <>
       {userLogged ? (
-        <div>
+        <>
           <p>ciao {userLogged.nome} </p>
-
           <div>
             <span>Nome: </span> <span>{userLogged.nome}</span>
           </div>
@@ -19,8 +19,12 @@ export function Dashboard() {
           <div>
             <span>Email: </span> <span>{userLogged.email}</span>
           </div>
-          <button onClick={logout()}>Logout</button>
-        </div>
+          <button onClick={logout}>Logout</button>
+          <div>
+            <h2>Lista utenti registrati:</h2>
+            <FakeDatabase />
+          </div>
+        </>
       ) : (
         <p>Nessun utente effettua il login</p>
       )}

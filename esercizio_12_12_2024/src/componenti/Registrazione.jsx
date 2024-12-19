@@ -104,7 +104,6 @@ export function Registrazione() {
         {errore && <p style={{ color: "red" }}> {errore}</p>}
         {errorEmail && <p style={{ color: "red" }}> {errorEmail}</p>}
         <button disabled={errore ? true : false} type="submit">
-          {" "}
           Registrati
         </button>
       </form>
