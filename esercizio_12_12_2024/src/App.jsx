@@ -10,8 +10,10 @@ import { Dashboard } from "./componenti/Dashboard";
 function App() {
   return (
     <UserProvider>
-      <Registrazione></Registrazione>
-      <Login></Login>
+      <div className="wrapper">
+        <Registrazione></Registrazione>
+        <Login></Login>
+      </div>
       <Dashboard></Dashboard>
     </UserProvider>
   );

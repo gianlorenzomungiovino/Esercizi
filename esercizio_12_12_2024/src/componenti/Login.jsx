@@ -37,12 +37,23 @@ export function Login() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleLogin}>
+    <div className="box">
+      <form className="form" onSubmit={handleLogin}>
+        <h3>Login</h3>
         <label htmlFor="">Email:</label>
-        <input type="email" name="email" onChange={handleChange} />
-        <label htmlFor="">Password</label>
-        <input type="password" name="password" onChange={handleChange} />
+        <input
+          type="email"
+          name="email"
+          onChange={handleChange}
+          placeholder="Email..."
+        />
+        <label htmlFor="">Password:</label>
+        <input
+          type="password"
+          name="password"
+          onChange={handleChange}
+          placeholder="Password..."
+        />
         <button type="submit">Login</button>
         {messaggio && <p style={{ color: "red" }}>{messaggio}</p>}
       </form>

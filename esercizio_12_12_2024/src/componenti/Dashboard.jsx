@@ -19,14 +19,16 @@ export function Dashboard() {
           <div>
             <span>Email: </span> <span>{userLogged.email}</span>
           </div>
-          <button onClick={logout}>Logout</button>
+          <button className="btn-form" onClick={logout}>
+            Logout
+          </button>
           <div>
             <h2>Lista utenti registrati:</h2>
             <FakeDatabase />
           </div>
         </>
       ) : (
-        <p>Nessun utente effettua il login</p>
+        <p>Nessun utente ha effettuato il login</p>
       )}
     </>
   );

@@ -64,8 +64,9 @@ export function Registrazione() {
 
   return (
     <div className="box">
-      <form className="registrazione" onSubmit={handleSubmit}>
-        <label htmlFor="Nome">Nome</label>
+      <form className="form" onSubmit={handleSubmit}>
+        <h3>Registrati</h3>
+        <label htmlFor="Nome">Nome:</label>
         <input
           type="text"
           name="nome"
@@ -74,7 +75,7 @@ export function Registrazione() {
           onChange={handleChange}
           value={data.nome}
         />
-        <label htmlFor="Cognome">Cognome</label>
+        <label htmlFor="Cognome">Cognome:</label>
         <input
           type="text"
           name="cognome"
@@ -83,7 +84,7 @@ export function Registrazione() {
           onChange={handleChange}
           value={data.cognome}
         />
-        <label htmlFor="email">email</label>
+        <label htmlFor="email">Email:</label>
         <input
           type="email"
           name="email"
@@ -92,7 +93,7 @@ export function Registrazione() {
           onChange={handleChange}
           value={data.email}
         />
-        <label htmlFor="Password">Password</label>
+        <label htmlFor="Password">Password:</label>
         <input
           type="password"
           name="password"
@@ -103,7 +104,11 @@ export function Registrazione() {
         />
         {errore && <p style={{ color: "red" }}> {errore}</p>}
         {errorEmail && <p style={{ color: "red" }}> {errorEmail}</p>}
-        <button disabled={errore ? true : false} type="submit">
+        <button
+          className="btn-form"
+          disabled={errore ? true : false}
+          type="submit"
+        >
           Registrati
         </button>
       </form>
